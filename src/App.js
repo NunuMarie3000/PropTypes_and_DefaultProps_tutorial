@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Link from './components/Link';
 
-function App() {
+export default function App() {
+  const users = ['Storm', 'JJ'];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Link 
+      // title="React - A Javascript library for building user interfaces"
+      content="Content 1" 
+      users={users}
+      />
+
+      <Link
+        title="Getting Started"
+        content="Content 2"
+        users={users}
+      />
+
+      <Link
+        title="Tutorial: Intro to React"
+        content="Content 3"
+        // users={false}
+      />
+    </>
+  )
 }
 
-export default App;
